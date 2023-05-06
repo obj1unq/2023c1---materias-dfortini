@@ -6,7 +6,7 @@ class Materia {
 
 class Estudiante {
 
-	const materiasAprobadas = #{}
+	const property materiasAprobadas = #{}
 
 	method aprueba(materiaAprobada, notaAprobada) {
 		materiasAprobadas.add(new Aprobada(materia = materiaAprobada, nota = notaAprobada))
@@ -22,8 +22,8 @@ class Carrera {
 
 class Aprobada {
 
-	const nota
-	const materia
+	const property nota
+	const property materia
 
 }
 

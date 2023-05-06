@@ -2,12 +2,18 @@ import materias.*
 
 describe "inscripcion a materias" {
 
+	// materias
 	const objetos1 = new Materia()
+	const objetos2 = new Materia()
 	const matematica = new Materia()
 	const derechoRomano = new Materia()
-	const programacion = new Carrera(materias = #{ objetos1, matematica })
+	
+	// carreras
+	const programacion = new Carrera(materias = #{ objetos1, objetos2, matematica })
 	const medicina = new Carrera()
 	const derecho = new Carrera(materias = #{ derechoRomano })
+	
+	// estudiantes
 	const leandro = new Estudiante(materiasAprobadas = #{ objetos1 })
 	
 
