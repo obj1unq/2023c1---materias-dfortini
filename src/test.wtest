@@ -1,0 +1,20 @@
+import materias.*
+
+describe "inscripcion a materias" {
+
+	const objetos1 = new Materia()
+	const matematica = new Materia()
+	const derechoRomano = new Materia()
+	const programacion = new Carrera(materias = #{ objetos1, matematica })
+	const medicina = new Carrera()
+	const derecho = new Carrera(materias = #{ derechoRomano })
+	const leandro = new Estudiante(materiasAprobadas = #{ objetos1 })
+	
+
+	test "leandro aprobo objetos1" {
+		leandro.aprueba(objetos1, 5)
+		assert.equals(1, leandro.materiasAprobadas().size())
+	}
+
+}
+
