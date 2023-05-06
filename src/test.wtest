@@ -5,7 +5,9 @@ describe "inscripcion a materias" {
 	// materias
 	const objetos1 = new Materia()
 	const objetos2 = new Materia()
+	const objetos3 = new Materia()
 	const matematica = new Materia()
+	const elementosDeProgramacion = new Materia()
 	const derechoRomano = new Materia()
 	
 	// carreras

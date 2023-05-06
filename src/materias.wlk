@@ -1,3 +1,9 @@
+
+object universidad {
+	const carreras = #{}
+}
+
+
 class Materia {
 
 	const estudiantes = #{}
