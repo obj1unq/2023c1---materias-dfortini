@@ -1,4 +1,5 @@
 import materias.*
+import requisitos.*
 
 describe "inscripcion a materias" {
 
@@ -34,6 +35,21 @@ describe "inscripcion a materias" {
 	test "leandro aprobo objetos1" {
 		leandro.aprueba(objetos1, 5)
 		assert.equals(1, leandro.materiasAprobadas().size())
+	}
+	
+	test "para cursar objetos1 tengo que tener aprobada las correlativas" {
+		const requisitoCorrelativa = new Correlativa(correlativas = #{elementosDeProgramacion, matematica})
+		objetos1.tipoDeRequisito(requisitoCorrelativa)
+		
+	//...	
+	}
+	
+	test "objetos1 tiene correlativas y pasa a tener requisito por credito" {
+		const requisitoCorrelativa = new Correlativa(correlativas = #{elementosDeProgramacion, matematica})
+		objetos1.tipoDeRequisito(requisitoCorrelativa)
+		
+		const requisitoPorCredito = new PorCreditos(creditosNecesarios=40)
+		objetos1.tipoDeRequisito(requisitoPorCredito)
 	}
 
 }
